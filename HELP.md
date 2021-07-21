@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.example.spring-mvc-rest' is invalid and this project uses 'com.example.springmvcrest' instead.
+* The original package name 'com.example.spring-mvc-rest' is invalid and this project uses 'springmvcrest' instead.
 
 # Getting Started
 
