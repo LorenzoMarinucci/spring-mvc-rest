@@ -1,4 +1,4 @@
-package springmvcrest.api.model;
+package springmvcrest.api.v1.model;
 
 import lombok.Data;
 

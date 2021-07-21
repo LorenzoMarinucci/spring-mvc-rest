@@ -1,6 +1,6 @@
 package springmvcrest.services;
 
-import springmvcrest.api.model.CategoryDTO;
+import springmvcrest.api.v1.model.CategoryDTO;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package springmvcrest.services;
 
 import org.springframework.stereotype.Service;
-import springmvcrest.api.CategoryMapper;
-import springmvcrest.api.model.CategoryDTO;
+import springmvcrest.api.v1.mapper.CategoryMapper;
+import springmvcrest.api.v1.model.CategoryDTO;
 import springmvcrest.repositories.CategoryRepository;
 
 import java.util.List;

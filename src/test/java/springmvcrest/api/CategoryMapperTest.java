@@ -1,7 +1,8 @@
 package springmvcrest.api;
 
 import org.junit.jupiter.api.Test;
-import springmvcrest.api.model.CategoryDTO;
+import springmvcrest.api.v1.mapper.CategoryMapper;
+import springmvcrest.api.v1.model.CategoryDTO;
 import springmvcrest.domain.Category;
 
 import static org.junit.jupiter.api.Assertions.*;

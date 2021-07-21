@@ -1,8 +1,8 @@
-package springmvcrest.api;
+package springmvcrest.api.v1.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import springmvcrest.api.model.CategoryDTO;
+import springmvcrest.api.v1.model.CategoryDTO;
 import springmvcrest.domain.Category;
 
 @Mapper
