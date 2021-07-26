@@ -1,5 +1,7 @@
 package springmvcrest.controllers.v1;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -8,16 +10,20 @@ import springmvcrest.api.v1.model.CustomerDTO;
 import springmvcrest.api.v1.model.CustomerListDTO;
 import springmvcrest.services.CustomerService;
 
+@Api("Customer controller")
 @Controller
-@RequestMapping("/api/v1/customers")
+@RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {
 
     private final CustomerService customerService;
+
+    public static final String BASE_URL = "/api/v1/customers";
 
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
 
+    @ApiOperation(value = "This method will get a list of customers.")
     @GetMapping
     public ResponseEntity<CustomerListDTO> getAllCustomers() {
         return new ResponseEntity<>(
@@ -46,5 +52,11 @@ public class CustomerController {
     @PatchMapping("/{id}")
     public ResponseEntity<CustomerDTO> patchCustomer(@RequestBody CustomerDTO customerDTO, @PathVariable Long id) {
         return new ResponseEntity<>(customerService.patchCustomer(id, customerDTO), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
+        customerService.deleteCustomerById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

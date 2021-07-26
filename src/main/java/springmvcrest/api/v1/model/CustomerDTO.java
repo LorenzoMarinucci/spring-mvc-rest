@@ -1,12 +1,16 @@
 package springmvcrest.api.v1.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 public class CustomerDTO {
 
+    @ApiModelProperty(value = "This is the first name")
     private String firstName;
+
+    @ApiModelProperty(value = "Last name")
     private String lastName;
 
     @JsonProperty("customer_url")
