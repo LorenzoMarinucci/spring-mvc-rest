@@ -1,5 +1,6 @@
 package springmvcrest.services;
 
+import lorenzo.springframework.model.CustomerDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import springmvcrest.api.v1.mapper.CustomerMapper;
-import springmvcrest.api.v1.model.CustomerDTO;
 import springmvcrest.bootstrap.Bootstrap;
 import springmvcrest.domain.Customer;
 import springmvcrest.repositories.CategoryRepository;

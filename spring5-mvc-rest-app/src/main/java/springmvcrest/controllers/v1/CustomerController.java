@@ -2,12 +2,12 @@ package springmvcrest.controllers.v1;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lorenzo.springframework.model.CustomerDTO;
+import lorenzo.springframework.model.CustomerListDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import springmvcrest.api.v1.model.CustomerDTO;
-import springmvcrest.api.v1.model.CustomerListDTO;
 import springmvcrest.services.CustomerService;
 
 @Api("Customer controller")
@@ -26,8 +26,10 @@ public class CustomerController {
     @ApiOperation(value = "This method will get a list of customers.")
     @GetMapping
     public ResponseEntity<CustomerListDTO> getAllCustomers() {
+        CustomerListDTO customerListDTO = new CustomerListDTO();
+        customerListDTO.getCustomers().addAll(customerService.getAllCustomers());
         return new ResponseEntity<>(
-                new CustomerListDTO(customerService.getAllCustomers()),
+                customerListDTO,
                 HttpStatus.OK);
     }
 

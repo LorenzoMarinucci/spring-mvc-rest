@@ -1,8 +1,8 @@
 package springmvcrest.services;
 
-import springmvcrest.api.v1.model.CategoryDTO;
-import springmvcrest.api.v1.model.CustomerDTO;
-import springmvcrest.domain.Customer;
+
+
+import lorenzo.springframework.model.CustomerDTO;
 
 import java.util.List;
 

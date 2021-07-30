@@ -1,8 +1,8 @@
 package springmvcrest.api.v1.mapper;
 
+import lorenzo.springframework.model.CustomerDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import springmvcrest.api.v1.model.CustomerDTO;
 import springmvcrest.domain.Customer;
 
 @Mapper
